@@ -2,6 +2,8 @@
 
 https://programmers.co.kr/
 
+프로그래머스 사이트에서 문제를 풀어보며
+
 현업에서 자주 쓰는 언어인 python, Java, Javascript 중심으로 정리함.
 
 ※ 코딩테스트 문제는 ChatGPT 사용을 최대한 지양하고 풀어봤음.
