@@ -102,4 +102,49 @@ def solution(storage, usage, change):
 
 ***
 
-### 7번 / 
+### 7번 / 버스
+```Python
+def func1(num):
+    if 0 > num:
+        return 0
+    else:
+        return num
+
+def func2(num):
+    if num > 0:
+        return 0
+    else:
+        return num
+
+def func3(station):
+    num = 0
+    for people in station:
+        if people == "Off":
+            num += 1
+    return num
+
+def func4(station):
+    num = 0
+    for people in station:
+        if people == "On":
+            num += 1
+    return num
+
+
+def solution(seat, passengers):
+    num_passenger = 0
+    for station in passengers:
+        num_passenger += func4(station)
+        num_passenger -= func3(station)
+    answer = func1(seat - num_passenger)
+    return answer
+```
+**주요 개념 및 로직**
+1. station이 On일 때는 승객이 탑승한 것이므로 num_passenger에 func4 함수를 호출한 결과를 더하여 저장한다.
+2. station이 Off일 때는 승객이 하차한 것이므로 num_pasenger에 func3 함수를 호출한 결과를 빼 저장한다.
+3. 남은 자리 수는 전체 자리(seat)에서 num_passenger를 뺀 값인데, 음수가 되는 것을 방지하기 위해 func1 함수로 값을 보내어 전달받은 값을 answer에 할당한다.
+
+***
+
+### 7번 / 닉네임 규칙
+```Python
