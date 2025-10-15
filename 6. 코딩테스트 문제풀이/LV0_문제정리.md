@@ -148,3 +148,30 @@ def solution(seat, passengers):
 
 ### 7번 / 닉네임 규칙
 ```Python
+def solution(nickname):
+    answer = ""
+    for letter in nickname:
+        if letter == "l":
+            answer += "I"
+        elif letter == "w":
+            answer += "vv"
+        elif letter == "W":
+            answer += "VV"
+        elif letter == "O":
+            answer += "0"
+        else:
+            answer += letter
+    while len(answer) < 4:
+        answer += "o"
+    if len(answer) > 8:
+        answer = answer[:8]
+    return answer
+```
+**주요 개념 및 로직**
+1. 기존의 if len(answer) < 3을 while len(answer) < 4로 바꾼다.
+2. answer의 길이가 4 미만인 동안은 계속 "o"를 붙일 수 있어야 한다.
+
+***
+
+### 1번 / 출력
+```Python
