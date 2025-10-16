@@ -175,3 +175,31 @@ def solution(nickname):
 
 ### 1번 / 출력
 ```Python
+string_msg = "Spring is beginning"
+int_val = 3
+string_val = "3"
+
+print(string_msg)
+print(int_val + 10)
+print(string_val + "10")
+```
+**주요 개념 및 로직**
+1. String은 큰따옴표로, 정수는 큰따옴표 없이 선언한다.
+
+***
+
+### 2번 / 피타고라스의 정리
+```Python
+a = int(input())
+c = int(input())
+
+b_square = c*c - a*a
+print(b_square)
+```
+**주요 개념 및 로직**
+1. a와 c를 받고, c의 제곱에서 a의 제곱을 뺀다.
+
+***
+
+### 3번 / 나이 계산
+```Python
