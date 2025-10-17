@@ -203,3 +203,20 @@ print(b_square)
 
 ### 3번 / 나이 계산
 ```Python
+year = int(input())
+age_type = input()
+
+if age_type == "Korea":
+    answer = 2030 - year + 1
+elif age_type == "Year":
+    answer = 2030 - year
+
+print(answer)
+```
+**주요 개념 및 로직**
+1. year와 age_type을 input()으로 받아서 각각 Korea와 Year일 때의 나이를 계산해 answer에 저장한다.
+
+***
+
+### 4번 / 저축
+```Python
