@@ -220,3 +220,50 @@ print(answer)
 
 ### 4번 / 저축
 ```Python
+start = int(input())
+before = int(input())
+after = int(input())
+
+money = start
+month = 1
+while money < 70:
+    money += before
+    month += 1
+
+while money < 100:
+    money += after
+    month += 1
+
+print(month)
+```
+**주요 개념 및 로직**
+1. money를 start, month를 1로 초기화하고, money가 70이 될때까지는 before를 더하고, month에는 1을 더한다.
+2. money가 70이상 될 경우, money가 100이 될때까지 after를 더하고, month에 1을 더한다.
+3. money가 100이상 될 경우, 그 때의 month가 정답이다.
+
+***
+
+### 5번 / 산책
+```Python
+def solution(route):
+    east = 0
+    north = 0
+    for i in route:
+        if i == "N" :
+            north += 1
+        elif i == "S" :
+            north -= 1
+        elif i == "E" :
+            east += 1
+        elif i == "W" :
+            east -= 1
+
+    return [east, north]
+```
+**주요 개념 및 로직**
+1. east, north를 0으로 초기화하고, 동쪽, 북쪽이 나올 때는 +1, 서쪽, 남쪽이 나올 때는 -1을 더한다.
+
+***
+
+### 6번 / 가채점
+```Python
