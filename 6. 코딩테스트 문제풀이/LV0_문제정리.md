@@ -267,3 +267,19 @@ def solution(route):
 
 ### 6번 / 가채점
 ```Python
+def solution(numbers, our_score, score_list):
+    answer = []
+    for i in range(len(numbers)):
+        if our_score[i] == score_list[numbers[i]-1]:
+            answer.append("Same")
+        else:
+            answer.append("Different")
+    
+    return answer
+```
+**주요 개념 및 로직**
+1. i는 numbers의 길이, 즉 0부터 시작하므로 score_list에서 같은 성적을 뽑아내기 위해 numbers[i]에 1을 뺀 인덱스를 가져오고, 그걸 our_score의 인덱스와 비교해서 같으면 Same, 같지 않으면 Different로 분기한다.
+
+***
+
+### 7번 / 
