@@ -324,4 +324,26 @@ def solution(mode_type, humidity, val_set):
 
 ***
 
-### 
+### 8번 / 창고정리
+```Python
+def solution(storage, num):
+    clean_storage = []
+    clean_num = []
+    for i in range(len(storage)):
+        if storage[i] in clean_storage:
+            pos = clean_storage.index(storage[i])
+            clean_num[pos] += num[i]
+        else:
+            clean_storage.append(storage[i])
+            clean_num.append(num[i])
+            
+    # 아래 코드에는 틀린 부분이 없습니다.
+            
+    max_num = max(clean_num)
+    answer = clean_storage[clean_num.index(max_num)]
+    return answer
+```
+**주요 개념 및 로직**
+1. storage[i]가 clean_storage에 있는지 없는지에 따라 조건문이 갈리므로, 없을 때의 조건 clean_storage.append()에는 num의 원소가 들어가는 것이 아닌 storage의 원소가 들어가야 하므로 storage[i]로 바꾼다.
+
+***
